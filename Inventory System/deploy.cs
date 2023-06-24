@@ -77,7 +77,14 @@ namespace Inventory_System
                 return false;
             }
 
-            string query = @"
+            string query = @"SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));";
+            this.initiateNewConnectionWithDb();
+            if (!this.execute(query))
+            {
+                return false;
+            }
+
+            query = @"
                 CREATE TABLE `item` (
                   `id` int NOT NULL AUTO_INCREMENT,
                   `barcode` varchar(512) DEFAULT NULL,
@@ -102,7 +109,7 @@ namespace Inventory_System
             }
 
             query = @"
-                CREATE TABLE `item_inventory` (
+                CREATE TABLE `item_site` (
                   `id` int NOT NULL AUTO_INCREMENT,
                   `item_id` int DEFAULT NULL,
                   `site_id` int DEFAULT NULL,
