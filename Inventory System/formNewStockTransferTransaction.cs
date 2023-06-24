@@ -48,9 +48,9 @@ namespace Inventory_System
             this.Text = "View Transaction - Tools and Equipment Transfer";
             this.transactionId = id;
             this.isNew = false;
-            this.textBoxId.Enabled = true;
-            this.textBoxDateAndTime.Enabled = true;
-            this.textBoxNotes.ReadOnly = true;
+            this.textBoxId.Enabled = false;
+            this.textBoxDateAndTime.Enabled = false;
+            this.textBoxNotes.Enabled = false;
             this.buttonSave.Visible = false;
             this.buttonChooseItem.Visible = false;
             this.dataGridViewList.Columns[3].Visible = false;
@@ -190,7 +190,7 @@ namespace Inventory_System
             this.siteIdFrom = this.sites[0][this.comboBoxSitesFrom.SelectedIndex];
             this.siteIdTo = this.sites[0][this.comboBoxSitesTo.SelectedIndex];
 
-            this.notes = this.textBoxNotes.Text;
+            this.notes = this.textBoxNotes.Texts;
             this.backgroundWorkerSave.RunWorkerAsync();
 
             this.formLoading = new formLoading("Saving...");
@@ -269,9 +269,9 @@ namespace Inventory_System
                 return;
             }
 
-            this.textBoxId.Text = head[0][0];
-            this.textBoxDateAndTime.Text = head[4][0];
-            this.textBoxNotes.Text = head[2][0];
+            this.textBoxId.Texts = head[0][0];
+            this.textBoxDateAndTime.Texts = head[4][0];
+            this.textBoxNotes.Texts = head[2][0];
 
             this.comboBoxSitesFrom.Items.Clear();
             this.comboBoxSitesFrom.Items.Add(head[5][0]);

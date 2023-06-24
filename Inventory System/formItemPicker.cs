@@ -51,7 +51,7 @@ namespace Inventory_System
             this.totalRow = 0;
             this.selectedId = "";
 
-            this.textBoxPaginatePage.Text = "1";
+            this.paginationControl1.CurrentPage = 1;
 
             this.selectedSiteId = siteId;
         }
@@ -88,7 +88,7 @@ namespace Inventory_System
         public void loadList()
         {
             this.filterStatus = this.comboBoxStatus.SelectedIndex <= 0 ? "" : this.comboBoxStatus.SelectedIndex == 1 ? "1" : "0";
-            this.filterSearch = this.textBoxSearch.Text.Trim();
+            this.filterSearch = this.textBoxSearch.Texts.Trim();
 
             this.filterSite = "";
 
@@ -139,8 +139,8 @@ namespace Inventory_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            this.textBoxPaginatePage.Text = "1";
             this.currentPage = 1;
+            this.paginationControl1.CurrentPage = 1;
             this.loadList();
         }
 
@@ -150,7 +150,7 @@ namespace Inventory_System
             this.sites = site.getAllActiveSites();
 
             models.item item = new models.item();
-            this.items = item.list(this.filterSite, this.filterStatus, this.filterSearch, this.currentPage);
+            this.items = item.list(this.filterSite, this.filterStatus, this.filterSearch, this.paginationControl1.CurrentPage);
 
             int[] paginationData = item.paginationData();
 
@@ -237,38 +237,16 @@ namespace Inventory_System
             this.dataGridViewList.Rows.Clear();
             this.dataGridViewList.Rows.AddRange(rows);
 
-            this.labelListCount.Text = "Total: " + this.totalRow.ToString();
-            this.labelPaginateTotalPage.Text = "of " + this.totalPage;
+            this.paginationControl1.TotalPage = this.totalPage;
+            this.paginationControl1.TotalRow = this.totalRow;
 
             this.formLoading.finish();
         }
 
-        private void buttonPaginateBack_Click(object sender, EventArgs e)
-        {
-            this.currentPage--;
-            if (this.currentPage <= 0)
-            {
-                this.currentPage = 1;
-                return;
-            }
-            this.textBoxPaginatePage.Text = this.currentPage.ToString();
-            this.loadList();
-        }
-
-        private void buttonPaginateNext_Click(object sender, EventArgs e)
-        {
-            this.currentPage++;
-            if (this.currentPage > this.totalPage)
-            {
-                this.currentPage = this.totalPage;
-                return;
-            }
-            this.textBoxPaginatePage.Text = this.currentPage.ToString();
-            this.loadList();
-        }
-
         private void formItemPicker_Load(object sender, EventArgs e)
         {
+            this.currentPage = 1;
+            this.paginationControl1.CurrentPage = 1;
             this.loadList();
         }
 
@@ -276,28 +254,9 @@ namespace Inventory_System
         {
             if (e.KeyCode == Keys.Enter)
             {
+                this.currentPage = 1;
+                this.paginationControl1.CurrentPage = 1;
                 this.loadList();
-            }
-        }
-
-        private void textBoxPaginatePage_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                bool isNumeric = int.TryParse(this.textBoxPaginatePage.Text, out this.currentPage);
-                if (isNumeric)
-                {
-                    if (this.currentPage <= 0)
-                    {
-                        this.currentPage = 1;
-                    }
-                    if (this.currentPage > this.totalPage)
-                    {
-                        this.currentPage = this.totalPage;
-                    }
-                    this.textBoxPaginatePage.Text = this.currentPage.ToString();
-                    this.loadList();
-                }
             }
         }
 
@@ -307,6 +266,11 @@ namespace Inventory_System
             {
                 this.buttonSelect.PerformClick();
             }
+        }
+
+        private void paginationControl1_PageChanged(object sender, EventArgs e)
+        {
+            this.loadList();
         }
     }
 }

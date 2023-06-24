@@ -16,6 +16,7 @@ namespace Inventory_System
         private formPanelDashboard formPanelDashboard;
         private formPanelSites formPanelSites;
         private formPanelItems formPanelItems;
+        private formUsersList formUsersList;
         private formPanelStockTransfer formPanelStockTransfer;
         private formPanelInventoryAdjustment formPanelInventoryAdjustment;
         private bool askExit;
@@ -42,6 +43,7 @@ namespace Inventory_System
             this.formPanelItems = new formPanelItems(this);
             this.formPanelStockTransfer = new formPanelStockTransfer(this);
             this.formPanelInventoryAdjustment = new formPanelInventoryAdjustment(this);
+            this.formUsersList = new formUsersList();
         }
 
         private void loadPanelDashboard() 
@@ -92,6 +94,20 @@ namespace Inventory_System
             this.ResumeLayout(false);
             this.PerformLayout();
             this.formPanelItems.loadList();
+        }
+
+        private void loadPanelUsers()
+        {
+            this.labelTitle.Text = "Users";
+            this.SuspendLayout();
+            this.formUsersList.content.Top = 0;
+            this.formUsersList.content.Left = 0;
+            this.formUsersList.content.Size = this.panelContainer.Size;
+            this.panelContainer.Controls.Clear();
+            this.panelContainer.Controls.Add(this.formUsersList.content);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+            this.formUsersList.loadList();
         }
 
         private void loadPanelStockTransfer()
@@ -284,13 +300,13 @@ namespace Inventory_System
 
         private void customButtonSales_Click(object sender, EventArgs e)
         {
-            this.menuSelected(sender);
+            
         }
 
         private void customButtonManageUsers_Click(object sender, EventArgs e)
         {
-            formUsersList formUsersList = new formUsersList();
-            formUsersList.ShowDialog();
+            this.menuSelected(sender);
+            this.loadPanelUsers();
         }
 
         private void customButtonMyAccount_Click(object sender, EventArgs e)

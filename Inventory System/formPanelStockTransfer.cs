@@ -40,11 +40,12 @@ namespace Inventory_System
             this.currentPage = 1;
             this.totalPage = 0;
             this.totalRow = 0;
+            this.paginationControl1.CurrentPage = 1;
         }
 
         public void loadList()
         {
-            this.filterSearch = this.textBoxSearch.Text.Trim();
+            this.filterSearch = this.textBoxSearch.Texts.Trim();
 
             this.filterDateFrom = string.Format(
                 "{0}-{1}-{2}",
@@ -106,7 +107,7 @@ namespace Inventory_System
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            this.textBoxPaginatePage.Text = "1";
+            this.paginationControl1.CurrentPage = 1;
             this.currentPage = 1;
 
             this.loadList();
@@ -118,7 +119,7 @@ namespace Inventory_System
             this.sites = site.getAllActiveSites();
 
             models.inventoryTransfer inventoryTransfer = new models.inventoryTransfer();
-            this.transactions = inventoryTransfer.list(this.filterSiteFrom, this.filterSiteTo, this.filterDateFrom, this.filterDateTo, this.filterSearch, this.currentPage);
+            this.transactions = inventoryTransfer.list(this.filterSiteFrom, this.filterSiteTo, this.filterDateFrom, this.filterDateTo, this.filterSearch, this.paginationControl1.CurrentPage);
 
             this.totalRow = inventoryTransfer.getRowCount();
             this.currentPage = inventoryTransfer.getCurrentPage();
@@ -169,8 +170,8 @@ namespace Inventory_System
             this.dataGridViewList.Rows.Clear();
             this.dataGridViewList.Rows.AddRange(rows);
 
-            this.labelListCount.Text = "Total: " + this.totalRow.ToString();
-            this.labelPaginateTotalPage.Text = "of " + this.totalPage;
+            this.paginationControl1.TotalPage = this.totalPage;
+            this.paginationControl1.TotalRow = this.totalRow;
 
             this.formLoading.finish();
         }
@@ -179,55 +180,10 @@ namespace Inventory_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.textBoxPaginatePage.Text = "1";
                 this.currentPage = 1;
+                this.paginationControl1.CurrentPage = 1;
 
                 this.loadList();
-            }
-        }
-
-        private void buttonPaginateBack_Click(object sender, EventArgs e)
-        {
-            this.currentPage--;
-            if (this.currentPage <= 0)
-            {
-                this.currentPage = 1;
-                return;
-            }
-            this.textBoxPaginatePage.Text = this.currentPage.ToString();
-            this.loadList();
-        }
-
-        private void buttonPaginateNext_Click(object sender, EventArgs e)
-        {
-            this.currentPage++;
-            if (this.currentPage > this.totalPage)
-            {
-                this.currentPage = this.totalPage;
-                return;
-            }
-            this.textBoxPaginatePage.Text = this.currentPage.ToString();
-            this.loadList();
-        }
-
-        private void textBoxPaginatePage_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                bool isNumeric = int.TryParse(this.textBoxPaginatePage.Text, out this.currentPage);
-                if (isNumeric)
-                {
-                    if (this.currentPage <= 0)
-                    {
-                        this.currentPage = 1;
-                    }
-                    if (this.currentPage > this.totalPage)
-                    {
-                        this.currentPage = this.totalPage;
-                    }
-                    this.textBoxPaginatePage.Text = this.currentPage.ToString();
-                    this.loadList();
-                }
             }
         }
 
@@ -248,6 +204,11 @@ namespace Inventory_System
                     this.loadList();
                 }
             }
+        }
+
+        private void paginationControl1_PageChanged(object sender, EventArgs e)
+        {
+            this.loadList();
         }
     }
 }

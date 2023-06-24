@@ -39,11 +39,12 @@ namespace Inventory_System
             this.currentPage = 1;
             this.totalPage = 0;
             this.totalRow = 0;
+            this.paginationControl1.CurrentPage = 1;
         }
 
         public void loadList()
         {
-            this.filterSearch = this.textBoxSearch.Text.Trim();
+            this.filterSearch = this.textBoxSearch.Texts.Trim();
             this.filterSite = "";
 
             this.filterDateFrom = string.Format(
@@ -88,38 +89,6 @@ namespace Inventory_System
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.textBoxPaginatePage.Text = "1";
-            this.currentPage = 1;
-
-            this.loadList();
-        }
-
-        private void buttonPaginateBack_Click(object sender, EventArgs e)
-        {
-            this.currentPage--;
-            if (this.currentPage <= 0)
-            {
-                this.currentPage = 1;
-                return;
-            }
-            this.textBoxPaginatePage.Text = this.currentPage.ToString();
-            this.loadList();
-        }
-
-        private void buttonPaginateNext_Click(object sender, EventArgs e)
-        {
-            this.currentPage++;
-            if (this.currentPage > this.totalPage)
-            {
-                this.currentPage = this.totalPage;
-                return;
-            }
-            this.textBoxPaginatePage.Text = this.currentPage.ToString();
-            this.loadList();
-        }
-
         private void backgroundWorkerList_DoWork(object sender, DoWorkEventArgs e)
         {
             models.site site = new models.site();
@@ -127,7 +96,7 @@ namespace Inventory_System
 
             models.inventoryAdjustment inventoryAdjustment = new models.inventoryAdjustment();
 
-            this.transactions = inventoryAdjustment.list(this.filterSite, this.filterDateFrom, this.filterDateTo, this.filterSearch, this.currentPage);
+            this.transactions = inventoryAdjustment.list(this.filterSite, this.filterDateFrom, this.filterDateTo, this.filterSearch, this.paginationControl1.CurrentPage);
 
             this.totalRow = inventoryAdjustment.getRowCount();
             this.currentPage = inventoryAdjustment.getCurrentPage();
@@ -168,38 +137,17 @@ namespace Inventory_System
             this.dataGridViewList.Rows.Clear();
             this.dataGridViewList.Rows.AddRange(rows);
 
-            this.labelListCount.Text = "Total: " + this.totalRow.ToString();
-            this.labelPaginateTotalPage.Text = "of " + this.totalPage;
+            this.paginationControl1.TotalPage = this.totalPage;
+            this.paginationControl1.TotalRow = this.totalRow;
 
             this.formLoading.finish();
-        }
-
-        private void textBoxPaginatePage_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                bool isNumeric = int.TryParse(this.textBoxPaginatePage.Text, out this.currentPage);
-                if (isNumeric)
-                {
-                    if (this.currentPage <= 0)
-                    {
-                        this.currentPage = 1;
-                    }
-                    if (this.currentPage > this.totalPage)
-                    {
-                        this.currentPage = this.totalPage;
-                    }
-                    this.textBoxPaginatePage.Text = this.currentPage.ToString();
-                    this.loadList();
-                }
-            }
         }
 
         private void textBoxSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                this.textBoxPaginatePage.Text = "1";
+                this.paginationControl1.CurrentPage = 1;
                 this.currentPage = 1;
 
                 this.loadList();
@@ -223,6 +171,14 @@ namespace Inventory_System
                     this.loadList();
                 }
             }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            this.paginationControl1.CurrentPage = 1;
+            this.currentPage = 1;
+
+            this.loadList();
         }
     }
 }

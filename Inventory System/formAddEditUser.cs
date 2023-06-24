@@ -41,7 +41,7 @@ namespace Inventory_System
             this.isNew = false;
             this.Text = "View User";
             this.selectedUserId = userId;
-            this.labelPassword.Text = "Password (Leave blank to do not Update):";
+            this.labelPassword.Text = "Password (Leave blank to do not Update)";
             this.isMe = isMe;
 
             if (this.isMe)
@@ -61,31 +61,31 @@ namespace Inventory_System
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            if (this.textBoxFirstName.Text.Trim() == "")
+            if (this.textBoxFirstName.Texts.Trim() == "")
             {
                 MessageBox.Show("First Name is required", "Unable to Save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (this.textBoxLastName.Text.Trim() == "")
+            if (this.textBoxLastName.Texts.Trim() == "")
             {
                 MessageBox.Show("Last Name is required", "Unable to Save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (this.textBoxUsername.Text.Trim() == "")
+            if (this.textBoxUsername.Texts.Trim() == "")
             {
                 MessageBox.Show("Username is required", "Unable to Save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (this.textBoxPassword.Text.Trim() == "" && this.isNew == true)
+            if (this.textBoxPassword.Texts.Trim() == "" && this.isNew == true)
             {
                 MessageBox.Show("Password is required", "Unable to Save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (this.textBoxPassword.Text != this.textBoxRepeatPassword.Text)
+            if (this.textBoxPassword.Texts != this.textBoxRepeatPassword.Texts)
             {
                 MessageBox.Show("Password not match", "Unable to Save", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -106,10 +106,10 @@ namespace Inventory_System
                 }
             }
 
-            this.username = this.textBoxUsername.Text.Trim();
-            this.password = this.textBoxPassword.Text.Trim();
-            this.firstName = this.textBoxFirstName.Text.Trim();
-            this.lastName = this.textBoxLastName.Text.Trim();
+            this.username = this.textBoxUsername.Texts.Trim();
+            this.password = this.textBoxPassword.Texts.Trim();
+            this.firstName = this.textBoxFirstName.Texts.Trim();
+            this.lastName = this.textBoxLastName.Texts.Trim();
             this.status = this.comboBoxStatus.SelectedIndex == 0 ? "1" : "0";
 
             this.backgroundWorkerSave.RunWorkerAsync();
@@ -177,9 +177,9 @@ namespace Inventory_System
                 return;
             }
 
-            this.textBoxFirstName.Text = this.firstName;
-            this.textBoxLastName.Text = this.lastName;
-            this.textBoxUsername.Text = this.username;
+            this.textBoxFirstName.Texts = this.firstName;
+            this.textBoxLastName.Texts = this.lastName;
+            this.textBoxUsername.Texts = this.username;
             this.comboBoxStatus.SelectedIndex = this.status == "1" ? 0 : 1;
         }
     }

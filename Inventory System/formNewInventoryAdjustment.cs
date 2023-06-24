@@ -47,9 +47,9 @@ namespace Inventory_System
             this.Text = "View Transaction - Inventory Adjustment";
             this.transactionId = id;
             this.isNew = false;
-            this.textBoxId.Enabled = true;
-            this.textBoxDateAndTime.Enabled = true;
-            this.textBoxNotes.ReadOnly = true;
+            this.textBoxId.Enabled = false;
+            this.textBoxDateAndTime.Enabled = false;
+            this.textBoxNotes.Enabled = false;
             this.buttonSave.Visible = false;
             this.buttonChooseItem.Visible = false;
             this.dataGridViewList.Columns[5].Visible = false;
@@ -180,7 +180,7 @@ namespace Inventory_System
                 string quantity = this.dataGridViewList.Rows[i].Cells[4].Value.ToString().Trim();
 
                 string message = string.Format(
-                    "Invalid Quantity '{0}' input for Item: \r\n\r\nID: {1} \r\nBarcode: {2} \r\nName: {3}",
+                    "Invalid Quantity '{0}' input for Item: \r\n\r\nID: {1} \r\nItem Identification: {2} \r\nName: {3}",
                     quantity,
                     this.dataGridViewList.Rows[i].Cells[0].Value.ToString(),
                     this.dataGridViewList.Rows[i].Cells[1].Value.ToString(),
@@ -204,7 +204,7 @@ namespace Inventory_System
                 this.forAdjusmentItems[1].Add(quantity);
             }
 
-            this.notes = this.textBoxNotes.Text;
+            this.notes = this.textBoxNotes.Texts;
             this.backgroundWorkerSave.RunWorkerAsync();
 
             this.formLoading = new formLoading("Saving...");
@@ -249,9 +249,9 @@ namespace Inventory_System
                 return;
             }
 
-            this.textBoxId.Text = head[0][0];
-            this.textBoxDateAndTime.Text = head[4][0];
-            this.textBoxNotes.Text = head[2][0];
+            this.textBoxId.Texts = head[0][0];
+            this.textBoxDateAndTime.Texts = head[4][0];
+            this.textBoxNotes.Texts = head[2][0];
 
             this.comboBoxSites.Items.Clear();
             this.comboBoxSites.Items.Add(head[5][0]);

@@ -40,14 +40,10 @@ namespace Inventory_System
             this.customButtonLogout = new Inventory_System.ui.CustomButton();
             this.customButtonMyAccount = new Inventory_System.ui.CustomButton();
             this.customPanelMenus = new Inventory_System.ui.CustomPanel();
-            this.customButton1 = new Inventory_System.ui.CustomButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.customButtonReports = new Inventory_System.ui.CustomButton();
             this.customButtonCollapseMenus = new Inventory_System.ui.CustomButton();
             this.customButtonManageUsers = new Inventory_System.ui.CustomButton();
-            this.customButtonSales = new Inventory_System.ui.CustomButton();
             this.customButtonInventoryAdjustments = new Inventory_System.ui.CustomButton();
             this.customButtonDashboard = new Inventory_System.ui.CustomButton();
             this.customButtonTransferItems = new Inventory_System.ui.CustomButton();
@@ -183,8 +179,8 @@ namespace Inventory_System
             this.panelContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panelContainer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelContainer.BackColor = System.Drawing.SystemColors.Control;
+            this.panelContainer.BackgroundColor = System.Drawing.SystemColors.Control;
             this.panelContainer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panelContainer.BorderRadius = 10;
             this.panelContainer.BorderSize = 1;
@@ -248,14 +244,10 @@ namespace Inventory_System
             this.customPanelMenus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.customPanelMenus.BorderRadius = 10;
             this.customPanelMenus.BorderSize = 1;
-            this.customPanelMenus.Controls.Add(this.customButton1);
-            this.customPanelMenus.Controls.Add(this.label2);
             this.customPanelMenus.Controls.Add(this.label1);
             this.customPanelMenus.Controls.Add(this.label4);
-            this.customPanelMenus.Controls.Add(this.customButtonReports);
             this.customPanelMenus.Controls.Add(this.customButtonCollapseMenus);
             this.customPanelMenus.Controls.Add(this.customButtonManageUsers);
-            this.customPanelMenus.Controls.Add(this.customButtonSales);
             this.customPanelMenus.Controls.Add(this.customButtonInventoryAdjustments);
             this.customPanelMenus.Controls.Add(this.customButtonDashboard);
             this.customPanelMenus.Controls.Add(this.customButtonTransferItems);
@@ -268,45 +260,6 @@ namespace Inventory_System
             this.customPanelMenus.Size = new System.Drawing.Size(225, 673);
             this.customPanelMenus.TabIndex = 73;
             this.customPanelMenus.TextColor = System.Drawing.Color.Black;
-            // 
-            // customButton1
-            // 
-            this.customButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButton1.BorderRadius = 10;
-            this.customButton1.BorderSize = 1;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Image = global::Inventory_System.Properties.Resources.icons8_bar_chart_16_white;
-            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(10, 405);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.customButton1.Size = new System.Drawing.Size(202, 30);
-            this.customButton1.TabIndex = 8;
-            this.customButton1.Text = "Report 2";
-            this.customButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customButton1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(10, 345);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 10, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 15);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "Reports";
             // 
             // label1
             // 
@@ -331,33 +284,6 @@ namespace Inventory_System
             this.label4.Size = new System.Drawing.Size(33, 15);
             this.label4.TabIndex = 74;
             this.label4.Text = "Data";
-            // 
-            // customButtonReports
-            // 
-            this.customButtonReports.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButtonReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtonReports.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtonReports.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtonReports.BorderRadius = 10;
-            this.customButtonReports.BorderSize = 1;
-            this.customButtonReports.FlatAppearance.BorderSize = 0;
-            this.customButtonReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButtonReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButtonReports.ForeColor = System.Drawing.Color.White;
-            this.customButtonReports.Image = global::Inventory_System.Properties.Resources.icons8_bar_chart_16_white;
-            this.customButtonReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButtonReports.Location = new System.Drawing.Point(10, 365);
-            this.customButtonReports.Margin = new System.Windows.Forms.Padding(5);
-            this.customButtonReports.Name = "customButtonReports";
-            this.customButtonReports.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.customButtonReports.Size = new System.Drawing.Size(202, 30);
-            this.customButtonReports.TabIndex = 7;
-            this.customButtonReports.Text = "Report 1";
-            this.customButtonReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButtonReports.TextColor = System.Drawing.Color.White;
-            this.customButtonReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customButtonReports.UseVisualStyleBackColor = false;
             // 
             // customButtonCollapseMenus
             // 
@@ -408,34 +334,6 @@ namespace Inventory_System
             this.customButtonManageUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.customButtonManageUsers.UseVisualStyleBackColor = false;
             this.customButtonManageUsers.Click += new System.EventHandler(this.customButtonManageUsers_Click);
-            // 
-            // customButtonSales
-            // 
-            this.customButtonSales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButtonSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtonSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtonSales.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customButtonSales.BorderRadius = 10;
-            this.customButtonSales.BorderSize = 1;
-            this.customButtonSales.FlatAppearance.BorderSize = 0;
-            this.customButtonSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButtonSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButtonSales.ForeColor = System.Drawing.Color.White;
-            this.customButtonSales.Image = global::Inventory_System.Properties.Resources.icons8_checkout_16_white;
-            this.customButtonSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButtonSales.Location = new System.Drawing.Point(10, 300);
-            this.customButtonSales.Margin = new System.Windows.Forms.Padding(5);
-            this.customButtonSales.Name = "customButtonSales";
-            this.customButtonSales.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.customButtonSales.Size = new System.Drawing.Size(202, 30);
-            this.customButtonSales.TabIndex = 6;
-            this.customButtonSales.Text = "Sales";
-            this.customButtonSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButtonSales.TextColor = System.Drawing.Color.White;
-            this.customButtonSales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customButtonSales.UseVisualStyleBackColor = false;
-            this.customButtonSales.Click += new System.EventHandler(this.customButtonSales_Click);
             // 
             // customButtonInventoryAdjustments
             // 
@@ -638,15 +536,11 @@ namespace Inventory_System
         private ui.CustomButton customButtonMyAccount;
         private ui.CustomButton customButtonLogout;
         private System.Windows.Forms.Panel panelHorizontalLine;
-        private ui.CustomButton customButtonSales;
         private ui.CustomButton customButtonManageUsers;
         private ui.CustomPanel panelContainer;
         private ui.CustomButton customButtonCollapseMenus;
-        private ui.CustomButton customButtonReports;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private ui.CustomButton customButton1;
-        private System.Windows.Forms.Label label2;
         private ui.CustomButton customButtonSettings;
         private ui.CustomPanel customPanelSettingsMenu;
         private ui.CustomButton customButtonAbout;

@@ -17,13 +17,15 @@ namespace Inventory_System.ui
             InitializeComponent();
 
             this.textBoxPage.Text = currentPage.ToString();
-            this.labelTotalRows.Text = "Total Rows: " + totalPage.ToString();
+            this.labelTotalRows.Text = "Total Records: " + totalPage.ToString();
             this.labelTotalPage.Text = totalPage.ToString();
         }
 
         int currentPage = 0;
         int totalRow = 0;
         int totalPage = 0;
+        int rowsPerPage = 50;
+        int offset = 0;
 
         [Category("Pagination")]
         public int CurrentPage
@@ -52,7 +54,7 @@ namespace Inventory_System.ui
             set
             {
                 totalRow = value;
-                this.labelTotalRows.Text = "Total Rows: " + totalRow.ToString();
+                this.labelTotalRows.Text = "Total Records: " + totalRow.ToString();
                 this.Invalidate();
             }
         }

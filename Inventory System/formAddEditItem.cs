@@ -46,7 +46,6 @@ namespace Inventory_System
             this.id = id;
             this.Text = "Update Item";
             this.isAdd = false;
-            this.labelId.Text = "ID: " + id;
         }
 
         public void displayAdd()
@@ -101,7 +100,7 @@ namespace Inventory_System
         {
             if (this.isAdd)
             {
-                this.textBoxBarcode.Text = this.barcode;
+                this.textBoxBarcode.Texts = this.barcode;
             }
             else
             {
@@ -113,10 +112,9 @@ namespace Inventory_System
                     return;
                 }
 
-                this.textBoxBarcode.Text = this.barcode;
-                this.textBoxName.Text = this.name;
-                this.textBoxDescription.Text = this.description;
-                this.textBoxPrice.Text = this.price;
+                this.textBoxBarcode.Texts = this.barcode;
+                this.textBoxName.Texts = this.name;
+                this.textBoxDescription.Texts = this.description;
                 this.comboBoxStatus.SelectedIndex = this.status == "1" ? 0 : 1;
             }
 
@@ -158,10 +156,10 @@ namespace Inventory_System
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            this.barcode = this.textBoxBarcode.Text.Trim();
-            this.name = this.textBoxName.Text.Trim();
-            this.description = this.textBoxDescription.Text.Trim();
-            this.price = this.textBoxPrice.Text.Trim();
+            this.barcode = this.textBoxBarcode.Texts.Trim();
+            this.name = this.textBoxName.Texts.Trim();
+            this.description = this.textBoxDescription.Texts.Trim();
+            this.price = "0";
             this.status = this.comboBoxStatus.SelectedIndex == 0 ? "1" : "0";
 
             if (this.barcode == "")

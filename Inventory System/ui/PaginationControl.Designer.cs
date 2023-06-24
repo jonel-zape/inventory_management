@@ -104,9 +104,9 @@ namespace Inventory_System.ui
             this.labelTotalRows.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelTotalRows.Location = new System.Drawing.Point(-3, 35);
             this.labelTotalRows.Name = "labelTotalRows";
-            this.labelTotalRows.Size = new System.Drawing.Size(109, 15);
+            this.labelTotalRows.Size = new System.Drawing.Size(124, 15);
             this.labelTotalRows.TabIndex = 78;
-            this.labelTotalRows.Text = "Total Rows: 99999";
+            this.labelTotalRows.Text = "Total Records: 99999";
             // 
             // textBoxPage
             // 

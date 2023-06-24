@@ -313,5 +313,10 @@ namespace Inventory_System
         {
             this.loadList();
         }
+
+        private void paginationControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

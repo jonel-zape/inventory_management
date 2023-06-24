@@ -91,6 +91,7 @@ namespace Inventory_System
             this.paginationControl1.TotalPage = 100;
             this.paginationControl1.TotalRow = 999;
             this.paginationControl1.PageChanged += new System.EventHandler(this.paginationControl1_PageChanged);
+            this.paginationControl1.Load += new System.EventHandler(this.paginationControl1_Load);
             // 
             // addNew
             // 
@@ -104,7 +105,7 @@ namespace Inventory_System
             this.addNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNew.ForeColor = System.Drawing.Color.White;
             this.addNew.Image = global::Inventory_System.Properties.Resources.icons8_add_16_white;
-            this.addNew.Location = new System.Drawing.Point(15, 39);
+            this.addNew.Location = new System.Drawing.Point(15, 38);
             this.addNew.Name = "addNew";
             this.addNew.Size = new System.Drawing.Size(100, 30);
             this.addNew.TabIndex = 0;
@@ -127,7 +128,7 @@ namespace Inventory_System
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.buttonSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonSearch.Image")));
-            this.buttonSearch.Location = new System.Drawing.Point(985, 39);
+            this.buttonSearch.Location = new System.Drawing.Point(985, 38);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(44, 30);
             this.buttonSearch.TabIndex = 3;
@@ -146,7 +147,7 @@ namespace Inventory_System
             this.textBoxSearch.BorderSize = 1;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxSearch.Location = new System.Drawing.Point(728, 39);
+            this.textBoxSearch.Location = new System.Drawing.Point(728, 38);
             this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSearch.Multiline = false;
             this.textBoxSearch.Name = "textBoxSearch";
@@ -178,7 +179,7 @@ namespace Inventory_System
             "Inactive"});
             this.comboBoxStatus.ListBackColor = System.Drawing.Color.White;
             this.comboBoxStatus.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboBoxStatus.Location = new System.Drawing.Point(521, 39);
+            this.comboBoxStatus.Location = new System.Drawing.Point(521, 38);
             this.comboBoxStatus.MinimumSize = new System.Drawing.Size(200, 30);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Padding = new System.Windows.Forms.Padding(1);
@@ -195,7 +196,7 @@ namespace Inventory_System
             this.label2.Location = new System.Drawing.Point(725, 15);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 15, 5, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 16);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 10;
             this.label2.Text = "Input Search";
             // 
@@ -208,7 +209,7 @@ namespace Inventory_System
             this.label1.Location = new System.Drawing.Point(518, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 15, 5, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Status";
             // 
