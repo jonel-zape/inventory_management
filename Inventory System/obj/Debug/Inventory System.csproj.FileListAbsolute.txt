@@ -1,0 +1,42 @@
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\Inventory System.exe.config
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\Inventory System.exe
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\Inventory System.pdb
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.AssemblyReference.cache
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.Properties.Resources.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.GenerateResource.cache
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.csproj.CoreCompileInputs.cache
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.exe
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory System.pdb
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formLogin.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formDashboard.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formAbout.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formPanelDashboard.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formPanelSites.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formLoading.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formPanelItems.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formAddEditSite.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formPanelStockTransfer.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formPanelInventoryAdjustment.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formAddEditItem.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formNewStockTransferTransaction.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formItemPicker.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formNewInventoryAdjustment.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formChangeProductKey.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formChangeUsernamePassword.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formSettings.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\MySql.Data.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\Google.Protobuf.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\Zstandard.Net.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\System.Memory.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\System.Buffers.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\bin\Debug\MySql.Data.xml
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formUsersList.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formAddEditUser.resources
+C:\Users\jonel.zape\source\repos\Inventory System\Inventory System\obj\Debug\Inventory_System.formInputCurrentPassword.resources
