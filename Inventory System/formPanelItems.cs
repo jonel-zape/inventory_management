@@ -126,7 +126,7 @@ namespace Inventory_System
                 rows[i].Cells[4].Value = this.items[12][i];
 
 
-                rows[i].Cells[5].Value = this.items[5][i] == "1" ? "Active": "Inactive";
+                rows[i].Cells[5].Value = this.items[5][i] == "1" ? "Condition" : "Uncondition";
                 if (this.items[5][i] == "1")
                 {
                     rows[i].Cells[5].Style.ForeColor = Color.Green;

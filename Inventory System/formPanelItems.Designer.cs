@@ -135,8 +135,8 @@ namespace Inventory_System
             this.comboBoxStatus.IconColor = System.Drawing.Color.Gray;
             this.comboBoxStatus.Items.AddRange(new object[] {
             "All",
-            "Active",
-            "Inactive"});
+            "Condition",
+            "Uncondition"});
             this.comboBoxStatus.ListBackColor = System.Drawing.Color.White;
             this.comboBoxStatus.ListTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboBoxStatus.Location = new System.Drawing.Point(670, 38);
