@@ -35,7 +35,9 @@ namespace Inventory_System
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.customPanel1 = new Inventory_System.ui.CustomPanel();
             this.loadingCell = new Inventory_System.ui.CustomPanel();
+            this.customPanel2 = new Inventory_System.ui.CustomPanel();
             this.customPanel1.SuspendLayout();
+            this.customPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // displayText
@@ -47,11 +49,11 @@ namespace Inventory_System
             this.displayText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.displayText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.displayText.ForeColor = System.Drawing.Color.White;
-            this.displayText.Location = new System.Drawing.Point(0, 28);
+            this.displayText.Location = new System.Drawing.Point(25, 28);
             this.displayText.Multiline = true;
             this.displayText.Name = "displayText";
             this.displayText.ReadOnly = true;
-            this.displayText.Size = new System.Drawing.Size(282, 61);
+            this.displayText.Size = new System.Drawing.Size(232, 33);
             this.displayText.TabIndex = 2;
             this.displayText.TabStop = false;
             this.displayText.Text = "Loading...";
@@ -78,9 +80,9 @@ namespace Inventory_System
             this.customPanel1.BorderSize = 1;
             this.customPanel1.Controls.Add(this.loadingCell);
             this.customPanel1.ForeColor = System.Drawing.Color.Black;
-            this.customPanel1.Location = new System.Drawing.Point(12, 95);
+            this.customPanel1.Location = new System.Drawing.Point(12, 63);
             this.customPanel1.Name = "customPanel1";
-            this.customPanel1.Size = new System.Drawing.Size(258, 15);
+            this.customPanel1.Size = new System.Drawing.Size(233, 15);
             this.customPanel1.TabIndex = 73;
             this.customPanel1.TextColor = System.Drawing.Color.Black;
             // 
@@ -96,19 +98,36 @@ namespace Inventory_System
             this.loadingCell.ForeColor = System.Drawing.Color.Black;
             this.loadingCell.Location = new System.Drawing.Point(1, 1);
             this.loadingCell.Name = "loadingCell";
-            this.loadingCell.Size = new System.Drawing.Size(70, 13);
+            this.loadingCell.Size = new System.Drawing.Size(45, 13);
             this.loadingCell.TabIndex = 74;
             this.loadingCell.TextColor = System.Drawing.Color.Black;
+            // 
+            // customPanel2
+            // 
+            this.customPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.customPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customPanel2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customPanel2.BorderColor = System.Drawing.SystemColors.Control;
+            this.customPanel2.BorderRadius = 20;
+            this.customPanel2.BorderSize = 1;
+            this.customPanel2.Controls.Add(this.customPanel1);
+            this.customPanel2.ForeColor = System.Drawing.Color.Black;
+            this.customPanel2.Location = new System.Drawing.Point(12, 12);
+            this.customPanel2.Name = "customPanel2";
+            this.customPanel2.Size = new System.Drawing.Size(258, 91);
+            this.customPanel2.TabIndex = 74;
+            this.customPanel2.TextColor = System.Drawing.Color.Black;
             // 
             // formLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(282, 122);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(282, 115);
             this.ControlBox = false;
-            this.Controls.Add(this.customPanel1);
             this.Controls.Add(this.displayText);
+            this.Controls.Add(this.customPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -118,7 +137,9 @@ namespace Inventory_System
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "formLoading";
+            this.TransparencyKey = System.Drawing.Color.White;
             this.customPanel1.ResumeLayout(false);
+            this.customPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +151,6 @@ namespace Inventory_System
         private System.Windows.Forms.Timer timer2;
         private ui.CustomPanel customPanel1;
         private ui.CustomPanel loadingCell;
+        private ui.CustomPanel customPanel2;
     }
 }

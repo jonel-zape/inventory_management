@@ -38,6 +38,8 @@ namespace Inventory_System
             this.backgroundWorkerAddSite = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerUpdateSite = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customButtonClose = new Inventory_System.ui.CustomButton();
+            this.customButtonSave = new Inventory_System.ui.CustomButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@ namespace Inventory_System
             this.textBoxAddress = new Inventory_System.ui.CustomTextBox();
             this.textBoxName = new Inventory_System.ui.CustomTextBox();
             this.customTextBoxID = new Inventory_System.ui.CustomTextBox();
-            this.customButtonClose = new Inventory_System.ui.CustomButton();
-            this.customButtonSave = new Inventory_System.ui.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,9 +62,9 @@ namespace Inventory_System
             this.labelId.Location = new System.Drawing.Point(21, 23);
             this.labelId.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(144, 16);
+            this.labelId.Size = new System.Drawing.Size(20, 16);
             this.labelId.TabIndex = 0;
-            this.labelId.Text = "ID (System Generated)";
+            this.labelId.Text = "ID";
             // 
             // label2
             // 
@@ -74,7 +74,7 @@ namespace Inventory_System
             this.label2.Location = new System.Drawing.Point(229, 24);
             this.label2.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 16);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name";
             // 
@@ -86,7 +86,7 @@ namespace Inventory_System
             this.label3.Location = new System.Drawing.Point(21, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 16);
+            this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Address";
             // 
@@ -98,7 +98,7 @@ namespace Inventory_System
             this.label4.Location = new System.Drawing.Point(21, 174);
             this.label4.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Details";
             // 
@@ -110,7 +110,7 @@ namespace Inventory_System
             this.label5.Location = new System.Drawing.Point(21, 249);
             this.label5.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "Type";
             // 
@@ -144,6 +144,52 @@ namespace Inventory_System
             this.panel1.Size = new System.Drawing.Size(451, 60);
             this.panel1.TabIndex = 32;
             // 
+            // customButtonClose
+            // 
+            this.customButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.customButtonClose.BackColor = System.Drawing.Color.White;
+            this.customButtonClose.BackgroundColor = System.Drawing.Color.White;
+            this.customButtonClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.customButtonClose.BorderRadius = 10;
+            this.customButtonClose.BorderSize = 1;
+            this.customButtonClose.FlatAppearance.BorderSize = 0;
+            this.customButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButtonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButtonClose.ForeColor = System.Drawing.Color.Black;
+            this.customButtonClose.Location = new System.Drawing.Point(327, 15);
+            this.customButtonClose.Margin = new System.Windows.Forms.Padding(3, 3, 15, 15);
+            this.customButtonClose.Name = "customButtonClose";
+            this.customButtonClose.Size = new System.Drawing.Size(100, 30);
+            this.customButtonClose.TabIndex = 8;
+            this.customButtonClose.Text = "Close";
+            this.customButtonClose.TextColor = System.Drawing.Color.Black;
+            this.customButtonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.customButtonClose.UseVisualStyleBackColor = false;
+            this.customButtonClose.Click += new System.EventHandler(this.customButtonClose_Click);
+            // 
+            // customButtonSave
+            // 
+            this.customButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.customButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(173)))), ((int)(((byte)(106)))));
+            this.customButtonSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(173)))), ((int)(((byte)(106)))));
+            this.customButtonSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(146)))), ((int)(((byte)(91)))));
+            this.customButtonSave.BorderRadius = 10;
+            this.customButtonSave.BorderSize = 1;
+            this.customButtonSave.FlatAppearance.BorderSize = 0;
+            this.customButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButtonSave.ForeColor = System.Drawing.Color.White;
+            this.customButtonSave.Location = new System.Drawing.Point(221, 15);
+            this.customButtonSave.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
+            this.customButtonSave.Name = "customButtonSave";
+            this.customButtonSave.Size = new System.Drawing.Size(100, 30);
+            this.customButtonSave.TabIndex = 7;
+            this.customButtonSave.Text = "Save";
+            this.customButtonSave.TextColor = System.Drawing.Color.White;
+            this.customButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.customButtonSave.UseVisualStyleBackColor = false;
+            this.customButtonSave.Click += new System.EventHandler(this.customButtonSave_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -152,7 +198,7 @@ namespace Inventory_System
             this.label1.Location = new System.Drawing.Point(229, 249);
             this.label1.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 16);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 66;
             this.label1.Text = "Status";
             // 
@@ -164,7 +210,7 @@ namespace Inventory_System
             this.label6.Location = new System.Drawing.Point(21, 321);
             this.label6.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 16);
+            this.label6.Size = new System.Drawing.Size(98, 16);
             this.label6.TabIndex = 68;
             this.label6.Text = "Contact Person";
             // 
@@ -176,7 +222,7 @@ namespace Inventory_System
             this.label7.Location = new System.Drawing.Point(229, 321);
             this.label7.Margin = new System.Windows.Forms.Padding(15, 15, 5, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 16);
+            this.label7.Size = new System.Drawing.Size(103, 16);
             this.label7.TabIndex = 70;
             this.label7.Text = "Contact Number";
             // 
@@ -356,59 +402,13 @@ namespace Inventory_System
             this.customTextBoxID.Padding = new System.Windows.Forms.Padding(7);
             this.customTextBoxID.PasswordChar = false;
             this.customTextBoxID.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.customTextBoxID.PlaceholderText = "";
+            this.customTextBoxID.PlaceholderText = "Auto Generated";
             this.customTextBoxID.Size = new System.Drawing.Size(189, 31);
             this.customTextBoxID.TabIndex = 59;
             this.customTextBoxID.TabStop = false;
             this.customTextBoxID.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.customTextBoxID.Texts = "";
             this.customTextBoxID.UnderlinedStyle = false;
-            // 
-            // customButtonClose
-            // 
-            this.customButtonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButtonClose.BackColor = System.Drawing.Color.White;
-            this.customButtonClose.BackgroundColor = System.Drawing.Color.White;
-            this.customButtonClose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.customButtonClose.BorderRadius = 10;
-            this.customButtonClose.BorderSize = 1;
-            this.customButtonClose.FlatAppearance.BorderSize = 0;
-            this.customButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButtonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButtonClose.ForeColor = System.Drawing.Color.Black;
-            this.customButtonClose.Location = new System.Drawing.Point(327, 15);
-            this.customButtonClose.Margin = new System.Windows.Forms.Padding(3, 3, 15, 15);
-            this.customButtonClose.Name = "customButtonClose";
-            this.customButtonClose.Size = new System.Drawing.Size(100, 30);
-            this.customButtonClose.TabIndex = 8;
-            this.customButtonClose.Text = "Close";
-            this.customButtonClose.TextColor = System.Drawing.Color.Black;
-            this.customButtonClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customButtonClose.UseVisualStyleBackColor = false;
-            this.customButtonClose.Click += new System.EventHandler(this.customButtonClose_Click);
-            // 
-            // customButtonSave
-            // 
-            this.customButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(173)))), ((int)(((byte)(106)))));
-            this.customButtonSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(173)))), ((int)(((byte)(106)))));
-            this.customButtonSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(146)))), ((int)(((byte)(91)))));
-            this.customButtonSave.BorderRadius = 10;
-            this.customButtonSave.BorderSize = 1;
-            this.customButtonSave.FlatAppearance.BorderSize = 0;
-            this.customButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButtonSave.ForeColor = System.Drawing.Color.White;
-            this.customButtonSave.Location = new System.Drawing.Point(221, 15);
-            this.customButtonSave.Margin = new System.Windows.Forms.Padding(3, 3, 3, 15);
-            this.customButtonSave.Name = "customButtonSave";
-            this.customButtonSave.Size = new System.Drawing.Size(100, 30);
-            this.customButtonSave.TabIndex = 7;
-            this.customButtonSave.Text = "Save";
-            this.customButtonSave.TextColor = System.Drawing.Color.White;
-            this.customButtonSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customButtonSave.UseVisualStyleBackColor = false;
-            this.customButtonSave.Click += new System.EventHandler(this.customButtonSave_Click);
             // 
             // formAddEditSite
             // 

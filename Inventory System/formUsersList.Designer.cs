@@ -210,6 +210,9 @@ namespace Inventory_System
             // 
             // panelContent
             // 
+            this.panelContent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContent.Controls.Add(this.paginationControl1);
             this.panelContent.Controls.Add(this.comboBoxStatus);
             this.panelContent.Controls.Add(this.label3);

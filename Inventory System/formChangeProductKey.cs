@@ -38,7 +38,7 @@ namespace Inventory_System
 
             int minutes = 0;
             int.TryParse(Properties.Settings.Default.remaining_time, out minutes);
-            this.labelRemaining.Text = "Remaining: " + (minutes / 1440).ToString() + " Days";
+            this.labelRemaining.Text = "Key Expires In " + (minutes / 1440).ToString() + " Day(s)";
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Inventory_System
 
         private void buttonApply_Click(object sender, EventArgs e)
         {
-            this.inputKey = this.textBoxKey.Text.Trim();
+            this.inputKey = this.textBoxKey.Texts.Trim();
             this.isValid = false;
 
             this.backgroundWorkerValidate.RunWorkerAsync();

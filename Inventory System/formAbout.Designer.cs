@@ -37,7 +37,6 @@ namespace Inventory_System
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxLicenseTo = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -50,7 +49,7 @@ namespace Inventory_System
             this.panel2.Controls.Add(this.buttonClose);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 303);
+            this.panel2.Location = new System.Drawing.Point(0, 263);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(352, 60);
             this.panel2.TabIndex = 55;
@@ -94,7 +93,7 @@ namespace Inventory_System
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.Location = new System.Drawing.Point(24, 211);
+            this.panel3.Location = new System.Drawing.Point(24, 157);
             this.panel3.Margin = new System.Windows.Forms.Padding(15);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(304, 1);
@@ -106,7 +105,7 @@ namespace Inventory_System
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(119, 259);
+            this.label5.Location = new System.Drawing.Point(119, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 18);
             this.label5.TabIndex = 61;
@@ -117,7 +116,7 @@ namespace Inventory_System
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(122, 122);
+            this.label9.Location = new System.Drawing.Point(122, 76);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 13);
             this.label9.TabIndex = 66;
@@ -131,7 +130,7 @@ namespace Inventory_System
             this.textBoxLicenseTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLicenseTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLicenseTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxLicenseTo.Location = new System.Drawing.Point(31, 150);
+            this.textBoxLicenseTo.Location = new System.Drawing.Point(31, 104);
             this.textBoxLicenseTo.Multiline = true;
             this.textBoxLicenseTo.Name = "textBoxLicenseTo";
             this.textBoxLicenseTo.ReadOnly = true;
@@ -144,32 +143,19 @@ namespace Inventory_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(120)))), ((int)(((byte)(181)))));
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.labelTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 87);
+            this.panel1.Size = new System.Drawing.Size(352, 62);
             this.panel1.TabIndex = 68;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(215)))), ((int)(((byte)(237)))));
-            this.label1.Location = new System.Drawing.Point(25, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Manage your inventory in a simple way.";
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(24, 24);
+            this.labelTitle.Location = new System.Drawing.Point(24, 20);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(15);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(172, 20);
@@ -181,7 +167,7 @@ namespace Inventory_System
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(152, 229);
+            this.label2.Location = new System.Drawing.Point(152, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 69;
@@ -192,7 +178,7 @@ namespace Inventory_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(352, 363);
+            this.ClientSize = new System.Drawing.Size(352, 323);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxLicenseTo);
@@ -228,7 +214,6 @@ namespace Inventory_System
         private System.Windows.Forms.TextBox textBoxLicenseTo;
         private ui.CustomButton buttonClose;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label2;
     }

@@ -32,7 +32,6 @@ namespace Inventory_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.backgroundWorkerLogin = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -50,32 +49,19 @@ namespace Inventory_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(120)))), ((int)(((byte)(181)))));
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.labelTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 87);
+            this.panel1.Size = new System.Drawing.Size(440, 62);
             this.panel1.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(215)))), ((int)(((byte)(237)))));
-            this.label5.Location = new System.Drawing.Point(25, 47);
-            this.label5.Margin = new System.Windows.Forms.Padding(10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(192, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Manage your inventory in a simple way.";
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(24, 24);
+            this.labelTitle.Location = new System.Drawing.Point(15, 19);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(15);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(172, 20);
@@ -95,7 +81,7 @@ namespace Inventory_System
             this.panel2.Controls.Add(this.labelLicenseTo);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 199);
+            this.panel2.Location = new System.Drawing.Point(0, 179);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(440, 78);
             this.panel2.TabIndex = 56;
@@ -186,7 +172,7 @@ namespace Inventory_System
             this.textBoxPassword.BorderSize = 1;
             this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxPassword.Location = new System.Drawing.Point(236, 147);
+            this.textBoxPassword.Location = new System.Drawing.Point(236, 123);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 15, 4);
             this.textBoxPassword.Multiline = false;
             this.textBoxPassword.Name = "textBoxPassword";
@@ -211,7 +197,7 @@ namespace Inventory_System
             this.textBoxUsername.BorderSize = 1;
             this.textBoxUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBoxUsername.Location = new System.Drawing.Point(236, 108);
+            this.textBoxUsername.Location = new System.Drawing.Point(236, 84);
             this.textBoxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 15, 4);
             this.textBoxUsername.Multiline = false;
             this.textBoxUsername.Name = "textBoxUsername";
@@ -230,7 +216,7 @@ namespace Inventory_System
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(440, 277);
+            this.ClientSize = new System.Drawing.Size(440, 257);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.panel1);
@@ -258,7 +244,6 @@ namespace Inventory_System
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelLicenseTo;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Timer timerCounter;
         private ui.CustomButton buttonLogin;

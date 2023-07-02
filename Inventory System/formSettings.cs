@@ -41,28 +41,28 @@ namespace Inventory_System
         {
             // inv12262021
             string authCode = "9d24b721031df3fd455b3502b3452c21c829bbbc38e1df78f2509766d0efb6aa";
-            if (authCode != tools.hashString(textBoxAuthCode.Text))
+            if (authCode != tools.hashString(textBoxAuthCode.Texts))
             {
                 return false;
             }
 
-            Properties.Settings.Default.host = textBoxHost.Text;
-            Properties.Settings.Default.username = textBoxUsername.Text;
-            Properties.Settings.Default.password = textBoxPassword.Text;
-            Properties.Settings.Default.db = textBoxDatabase.Text;
+            Properties.Settings.Default.host = textBoxHost.Texts;
+            Properties.Settings.Default.username = textBoxUsername.Texts;
+            Properties.Settings.Default.password = textBoxPassword.Texts;
+            Properties.Settings.Default.db = textBoxDatabase.Texts;
             Properties.Settings.Default.Save();
 
-            textBoxAuthCode.Text = "";
+            textBoxAuthCode.Texts = "";
             return true;
         }
 
 
         private void formSettings_Load(object sender, EventArgs e)
         {
-            textBoxHost.Text = Properties.Settings.Default.host;
-            textBoxUsername.Text = Properties.Settings.Default.username;
-            textBoxPassword.Text = Properties.Settings.Default.password;
-            textBoxDatabase.Text = Properties.Settings.Default.db;
+            textBoxHost.Texts = Properties.Settings.Default.host;
+            textBoxUsername.Texts = Properties.Settings.Default.username;
+            textBoxPassword.Texts = Properties.Settings.Default.password;
+            textBoxDatabase.Texts = Properties.Settings.Default.db;
         }
 
         private void buttonSetup_Click(object sender, EventArgs e)

@@ -158,7 +158,7 @@ namespace Inventory_System
                 this.exitConfirmed = true;
             }
 
-            ui.CustomMessageBox customMessageBox = new ui.CustomMessageBox(ui.CustomMessageBox.ICON_QUESTION, ui.CustomMessageBox.BUTTON_YES_NO, "Confirm Exit", "Are you sure do you want to exit?");
+            ui.CustomMessageBox customMessageBox = new ui.CustomMessageBox(ui.CustomMessageBox.ICON_QUESTION, ui.CustomMessageBox.BUTTON_YES_NO, "Confirm Exit", "Are you sure you want to exit?");
 
             if (this.askExit && customMessageBox.ShowDialog() != DialogResult.Yes)
             {
@@ -251,7 +251,7 @@ namespace Inventory_System
 
         private void customButtonLogout_Click(object sender, EventArgs e)
         {
-            ui.CustomMessageBox customMessageBox = new ui.CustomMessageBox(ui.CustomMessageBox.ICON_QUESTION, ui.CustomMessageBox.BUTTON_YES_NO, "Confirm Log Out", "Are you sure do you want to log out?");
+            ui.CustomMessageBox customMessageBox = new ui.CustomMessageBox(ui.CustomMessageBox.ICON_QUESTION, ui.CustomMessageBox.BUTTON_YES_NO, "Confirm Log Out", "Are you sure you want to log out?");
 
             if (customMessageBox.ShowDialog() != DialogResult.Yes)
             {
